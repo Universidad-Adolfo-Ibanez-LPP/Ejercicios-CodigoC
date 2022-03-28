@@ -10,7 +10,8 @@
 #define MAXCHAR 1000
 
 Persona* getPersonas(FILE *fp) {
-    Persona personas[999];
+    //genero un array dinamico de personas
+    Persona *personas = (Persona*) malloc(sizeof(Persona));;
 
     char row[MAXCHAR];
     char *token;

@@ -31,12 +31,17 @@ void showContentsAsStruct(FILE *pFile) {
     Persona *personas;
     //paso el contenido del file a un array de personas
     personas = getPersonas(pFile);
-    int length=sizeof(*personas);
-    //Solo imprimo el mail de cada persona leyendo ya directo del arreglo
-    for (int i = 0; i < length; ++i) {
-        printf("%s \n", personas[i].email);
-    }
 
+    //COmo no se cuantas personas puede haber leido, uso un pre-test
+    int actual = 0;
+    //mientras el apellido sea un string valido, esa persona existe
+    while (strlen(personas[actual].surname) != 0){
+        //puedo solo imprimir su mail por ejemplo
+        printf("%s \n", personas[actual].email);
+        //paso a la siguiente persona
+        actual++;
+    }
+   
 }
 
 
