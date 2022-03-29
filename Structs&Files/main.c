@@ -32,16 +32,12 @@ void showContentsAsStruct(FILE *pFile) {
     //paso el contenido del file a un array de personas
     personas = getPersonas(pFile);
 
-    //COmo no se cuantas personas puede haber leido, uso un pre-test
-    int actual = 0;
-    //mientras el apellido sea un string valido, esa persona existe
-    while (strlen(personas[actual].surname) != 0){
+    //accedo a la cantidad de registro que lei
+    for (int i = 0; i < registryCount; ++i) {
         //puedo solo imprimir su mail por ejemplo
-        printf("%s \n", personas[actual].email);
-        //paso a la siguiente persona
-        actual++;
+        printf("%s \n", personas[i].email);
     }
-   
+
 }
 
 

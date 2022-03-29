@@ -3,12 +3,15 @@
 //
 struct Personas {
     int  id;
-    char  name[50];
-    char  surname[50];
-    char  email[100];
-    char   gender[50];
+    char  *name;
+    char  *surname;
+    char  *email;
+    char   *gender;
 } ;
 
 typedef struct Personas Persona;
 
+extern int registryCount;
+
 Persona* getPersonas(FILE *fp);
+
