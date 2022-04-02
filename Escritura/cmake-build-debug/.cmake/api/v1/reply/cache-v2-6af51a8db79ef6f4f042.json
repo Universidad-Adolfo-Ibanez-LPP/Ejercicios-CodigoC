@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Enums/cmake-build-debug"
+			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Escritura/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -419,7 +419,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Enums"
+			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Escritura"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -699,7 +699,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Enums"
+			"value" : "Escritura"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -982,7 +982,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Enums_BINARY_DIR",
+			"name" : "Escritura_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -991,10 +991,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Enums/cmake-build-debug"
+			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Escritura/cmake-build-debug"
 		},
 		{
-			"name" : "Enums_IS_TOP_LEVEL",
+			"name" : "Escritura_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1006,7 +1006,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Enums_SOURCE_DIR",
+			"name" : "Escritura_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1015,7 +1015,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Enums"
+			"value" : "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Escritura"
 		}
 	],
 	"kind" : "cache",

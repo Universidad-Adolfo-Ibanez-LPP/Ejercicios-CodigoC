@@ -15,3 +15,5 @@ extern int registryCount;
 
 Persona* getPersonas(FILE *fp);
 
+FILE * openFile(char *filename);
+void closeFile(FILE *pFile);

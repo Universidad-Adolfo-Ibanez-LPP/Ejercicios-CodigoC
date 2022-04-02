@@ -8,10 +8,23 @@
 #include "Personas.h"
 
 #define MAXCHAR 1000
+#define READ_ONLY "r"
+#define WRITE "w+"
+
 
 int registryCount = 0;
 
-Persona* getPersonas(FILE *fp) {
+FILE * openFile(char *filename){
+    FILE *fp;
+    fp = fopen(filename,READ_ONLY);
+    return fp;
+}
+
+void closeFile(FILE *fp){
+    fclose(fp);
+}
+
+Persona *getPersonas(FILE *fp) {
     //genero un array dinamico de personas
     Persona *personas = (Persona*) malloc(5000*sizeof(Persona));;
 
