@@ -129,6 +129,30 @@ Structs_Files/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/build
 .PHONY : Structs_Files/fast
 
+FileUtils.o: FileUtils.c.o
+.PHONY : FileUtils.o
+
+# target to build an object file
+FileUtils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/FileUtils.c.o
+.PHONY : FileUtils.c.o
+
+FileUtils.i: FileUtils.c.i
+.PHONY : FileUtils.i
+
+# target to preprocess a source file
+FileUtils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/FileUtils.c.i
+.PHONY : FileUtils.c.i
+
+FileUtils.s: FileUtils.c.s
+.PHONY : FileUtils.s
+
+# target to generate assembly for a file
+FileUtils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/FileUtils.c.s
+.PHONY : FileUtils.c.s
+
 Personas.o: Personas.c.o
 .PHONY : Personas.o
 
@@ -152,6 +176,30 @@ Personas.s: Personas.c.s
 Personas.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/Personas.c.s
 .PHONY : Personas.c.s
+
+Utils.o: Utils.c.o
+.PHONY : Utils.o
+
+# target to build an object file
+Utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/Utils.c.o
+.PHONY : Utils.c.o
+
+Utils.i: Utils.c.i
+.PHONY : Utils.i
+
+# target to preprocess a source file
+Utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/Utils.c.i
+.PHONY : Utils.c.i
+
+Utils.s: Utils.c.s
+.PHONY : Utils.s
+
+# target to generate assembly for a file
+Utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Structs_Files.dir/build.make CMakeFiles/Structs_Files.dir/Utils.c.s
+.PHONY : Utils.c.s
 
 main.o: main.c.o
 .PHONY : main.o
@@ -186,9 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Structs_Files"
+	@echo "... FileUtils.o"
+	@echo "... FileUtils.i"
+	@echo "... FileUtils.s"
 	@echo "... Personas.o"
 	@echo "... Personas.i"
 	@echo "... Personas.s"
+	@echo "... Utils.o"
+	@echo "... Utils.i"
+	@echo "... Utils.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

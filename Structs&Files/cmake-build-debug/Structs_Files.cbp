@@ -78,10 +78,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/FileUtils.c">
+			<Option target="Structs_Files"/>
+		</Unit>
+		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/FileUtils.h">
+			<Option target="Structs_Files"/>
+		</Unit>
 		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/Personas.c">
 			<Option target="Structs_Files"/>
 		</Unit>
 		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/Personas.h">
+			<Option target="Structs_Files"/>
+		</Unit>
+		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/Utils.c">
+			<Option target="Structs_Files"/>
+		</Unit>
+		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/Utils.h">
 			<Option target="Structs_Files"/>
 		</Unit>
 		<Unit filename="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&amp;Files/main.c">

@@ -4,120 +4,107 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include "Personas.h"
+#include "FileUtils.h"
+#include "Utils.h"
 
-enum OPTIONS {BUSCAR = 1, ELIMINAR = 2, MOSTRAR = 3, SALIR = 4};
+enum OPTIONS { BUSCAR = 1, ELIMINAR = 2, MOSTRAR = 3, SALIR = 5, AGREGAR = 4};
 
-void mostrarPersonas(Persona *personas);
-void buscarPersona(Persona *pPersonas);
-void eliminarPersona(Persona *personas);
-void salir(Persona *pPersonas);
-void showMenu(Persona *personas);
+//contratos
+void closeProgram();
+void showMenu();
+void keepGoing();
 
-void salir(Persona *pPersonas);
+//Variables
+//Defino la estructura que usare para guardar los contenidos en memoria
+char *filename;
 
-char *toLowerCase(char *name);
-
+//metodo principal
 int main(int argc, char *argv[] ){
 
     //Abro el archivo
-    FILE *fp = openFile(argv[1]);
-    //Defino la estructura que usare para guardar los contenidos en memoria
-    Persona *personas;
+    filename = argv[1];
+    FILE *fp = openFileToRead(filename);
     //paso el contenido del file a un array de personas
     personas = getPersonas(fp);
     //cierro el archivo.
     closeFile(fp);
     //Cargo la estructura
-    showMenu(personas);
+    showMenu();
     return 0;
 
 }
 
 void showTitles(){
+    printf("********************************** \n");
+    printf("***** Bienvenido a Personas ****** \n");
+    printf("********************************** \n");
     printf("Ingrese la opción \n");
     printf("1. - Buscar Persona \n");
     printf("2. - Borrar Persona \n");
     printf("3. - Mostrar Personas \n");
-    printf("4. - Salir \n");
+    printf("4. - Agregar Persona \n");
+    printf("5. - Salir \n");
+
 }
-void showMenu(Persona *personas){
+void showMenu(){
     int option = 0;
     showTitles();
     scanf("%d", &option);
     //esto hace que el menu vuelva a mostrarse hasta que me ingrese una opcion valida
-    while (option <= 0 || option >= 5) {
-        printf("Opcion Invalida! \n");
+    while (option <= 0 || option >= 6) {
+        printf("Opción Invalida! \n");
         showTitles();
         scanf("%d", &option);
     } ;
     //Solo salgo con una opcion valida
     switch (option) {
+        case AGREGAR:
+            agregarPersona();
+            //al terminar muestro el menu de nuevo;
+            keepGoing();
+            break;
         case BUSCAR:
-            buscarPersona(personas);
+            buscarPersona();
+            //al terminar muestro el menu de nuevo;
+            keepGoing();
             break;
         case ELIMINAR:
-            eliminarPersona(personas);
+            eliminarPersona();
+            //al terminar muestro el menu de nuevo;
+            keepGoing();
             break;
         case MOSTRAR:
-            mostrarPersonas(personas);
+            mostrarPersonas();
+            //al terminar muestro el menu de nuevo;
+            keepGoing();
             break;
         case SALIR:
-            salir(personas);
+            closeProgram();
             break;
     }
 }
 
-void salir(Persona *pPersonas) {
-    printf("Gracias por usar el programa \n");
-}
-
-void buscarPersona(Persona *personas) {
-    char name[50];
-    printf("Ingrese el nombre o parte del nombre de la persona a buscar \n");
-    scanf("%s", &name);
-    //Hago una busqueda linea
-    int i = 0;
-    int encontre = 0;
-    while (i<registryCount && encontre == 0){
-        char *nameConverted = toLowerCase(personas[i].name);
-        char *nameToLook = toLowerCase(name);
-        char *ret = strstr(nameConverted, nameToLook);
-        if(ret){
-            encontre = 1;
-        } else {
-            i++;
-        }
-    }
-    //verifico que sali por que encontre
-    if (encontre == 1){
-        printf("La persona Existe, estos son los datos \n");
-        printf("%s,%s. \n", personas[i].name, personas[i].surname);
+void keepGoing() {
+    //verifico que el usuario quiera seguir o closeProgram
+    printf("Desea realizar una nueva acción? Presione S o cualquier otra tecla para cerarr el programa.");
+    char *rta = (char*)malloc(1 * sizeof(char));
+    scanf("%s", rta);
+    //Verifico que pueda closeProgram.
+    if (strcmp(toLowerC(rta), "s") == 0){
+        //muestro menu
+        showMenu();
     } else {
-        printf("La persona no existe!");
+        closeProgram();
     }
-
 }
 
-char *toLowerCase(char *name) {
-    char *converted =  (char*)malloc( strlen(name) * sizeof(char));
-    strcpy(converted,name);
-    for(int i = 0; converted[i]; i++){
-        converted[i] = tolower(converted[i]);
-    }
-    return converted;
-}
 
-void eliminarPersona(Persona *personas) {
 
-}
-
-void mostrarPersonas(Persona *personas) {
-
-    //accedo a la cantidad de registro que lei
-    for (int i = 0; i < registryCount; ++i) {
-        //puedo solo imprimir su mail por ejemplo
-        printf("%s,%s. \n", personas[i].name, personas[i].surname);
-    }
-
+void closeProgram() {
+    printf("Gracias por usar el programa \n");
+    //ahora hago el proceso inverso y finalmente copio todo de nuevo al archivo
+    FILE *fp = openFileToWrite(filename);
+    writePersonas(personas, fp);
+    closeFile(fp);
 }
 

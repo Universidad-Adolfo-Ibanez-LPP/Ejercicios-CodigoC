@@ -97,19 +97,51 @@ CMakeFiles/Structs_Files.dir/Personas.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Structs_Files.dir/Personas.c.s"
 	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Personas.c" -o CMakeFiles/Structs_Files.dir/Personas.c.s
 
+CMakeFiles/Structs_Files.dir/FileUtils.c.o: CMakeFiles/Structs_Files.dir/flags.make
+CMakeFiles/Structs_Files.dir/FileUtils.c.o: ../FileUtils.c
+CMakeFiles/Structs_Files.dir/FileUtils.c.o: CMakeFiles/Structs_Files.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Structs_Files.dir/FileUtils.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Structs_Files.dir/FileUtils.c.o -MF CMakeFiles/Structs_Files.dir/FileUtils.c.o.d -o CMakeFiles/Structs_Files.dir/FileUtils.c.o -c "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/FileUtils.c"
+
+CMakeFiles/Structs_Files.dir/FileUtils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Structs_Files.dir/FileUtils.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/FileUtils.c" > CMakeFiles/Structs_Files.dir/FileUtils.c.i
+
+CMakeFiles/Structs_Files.dir/FileUtils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Structs_Files.dir/FileUtils.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/FileUtils.c" -o CMakeFiles/Structs_Files.dir/FileUtils.c.s
+
+CMakeFiles/Structs_Files.dir/Utils.c.o: CMakeFiles/Structs_Files.dir/flags.make
+CMakeFiles/Structs_Files.dir/Utils.c.o: ../Utils.c
+CMakeFiles/Structs_Files.dir/Utils.c.o: CMakeFiles/Structs_Files.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Structs_Files.dir/Utils.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Structs_Files.dir/Utils.c.o -MF CMakeFiles/Structs_Files.dir/Utils.c.o.d -o CMakeFiles/Structs_Files.dir/Utils.c.o -c "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Utils.c"
+
+CMakeFiles/Structs_Files.dir/Utils.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Structs_Files.dir/Utils.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Utils.c" > CMakeFiles/Structs_Files.dir/Utils.c.i
+
+CMakeFiles/Structs_Files.dir/Utils.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Structs_Files.dir/Utils.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Utils.c" -o CMakeFiles/Structs_Files.dir/Utils.c.s
+
 # Object files for target Structs_Files
 Structs_Files_OBJECTS = \
 "CMakeFiles/Structs_Files.dir/main.c.o" \
-"CMakeFiles/Structs_Files.dir/Personas.c.o"
+"CMakeFiles/Structs_Files.dir/Personas.c.o" \
+"CMakeFiles/Structs_Files.dir/FileUtils.c.o" \
+"CMakeFiles/Structs_Files.dir/Utils.c.o"
 
 # External object files for target Structs_Files
 Structs_Files_EXTERNAL_OBJECTS =
 
 Structs_Files: CMakeFiles/Structs_Files.dir/main.c.o
 Structs_Files: CMakeFiles/Structs_Files.dir/Personas.c.o
+Structs_Files: CMakeFiles/Structs_Files.dir/FileUtils.c.o
+Structs_Files: CMakeFiles/Structs_Files.dir/Utils.c.o
 Structs_Files: CMakeFiles/Structs_Files.dir/build.make
 Structs_Files: CMakeFiles/Structs_Files.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Structs_Files"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable Structs_Files"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Structs_Files.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

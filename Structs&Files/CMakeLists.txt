@@ -3,4 +3,4 @@ project(Structs_Files C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(Structs_Files main.c Personas.h Personas.c)
+add_executable(Structs_Files main.c Personas.h Personas.c FileUtils.c FileUtils.h Utils.c Utils.h)

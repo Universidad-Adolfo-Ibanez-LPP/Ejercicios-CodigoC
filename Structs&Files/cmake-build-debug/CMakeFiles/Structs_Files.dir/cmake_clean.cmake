@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Structs_Files.dir/FileUtils.c.o"
+  "CMakeFiles/Structs_Files.dir/FileUtils.c.o.d"
   "CMakeFiles/Structs_Files.dir/Personas.c.o"
   "CMakeFiles/Structs_Files.dir/Personas.c.o.d"
+  "CMakeFiles/Structs_Files.dir/Utils.c.o"
+  "CMakeFiles/Structs_Files.dir/Utils.c.o.d"
   "CMakeFiles/Structs_Files.dir/main.c.o"
   "CMakeFiles/Structs_Files.dir/main.c.o.d"
   "Structs_Files"

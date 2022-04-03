@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/FileUtils.c" "CMakeFiles/Structs_Files.dir/FileUtils.c.o" "gcc" "CMakeFiles/Structs_Files.dir/FileUtils.c.o.d"
   "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Personas.c" "CMakeFiles/Structs_Files.dir/Personas.c.o" "gcc" "CMakeFiles/Structs_Files.dir/Personas.c.o.d"
+  "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/Utils.c" "CMakeFiles/Structs_Files.dir/Utils.c.o" "gcc" "CMakeFiles/Structs_Files.dir/Utils.c.o.d"
   "/Users/justo.vargas/Projects/Ejercicios-CodigoC/Structs&Files/main.c" "CMakeFiles/Structs_Files.dir/main.c.o" "gcc" "CMakeFiles/Structs_Files.dir/main.c.o.d"
   )
 
