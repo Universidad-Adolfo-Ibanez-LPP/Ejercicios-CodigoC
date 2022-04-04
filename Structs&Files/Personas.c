@@ -141,7 +141,7 @@ void agregarPersona() {
 
 
 void buscarPersona() {
-    char *name = (char*)malloc( strlen(name) * sizeof(char));
+    char *name = (char*)malloc( 50 * sizeof(char));
     printf("Ingrese el nombre o parte del nombre de la persona a buscar \n");
     scanf("%s", name);
     //Hago una busqueda linea
